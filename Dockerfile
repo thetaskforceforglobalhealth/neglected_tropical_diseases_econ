@@ -9,7 +9,7 @@ EXPOSE 8080
 
 # Copy local code to the container image.
 ENV APP_HOME /ntd_endgame
-WORKDIR $ntd_tools
+WORKDIR $APP_HOME
 COPY . ./
 
 # Install production dependencies.
