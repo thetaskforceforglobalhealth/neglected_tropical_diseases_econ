@@ -10,7 +10,7 @@
  Pillow==9.2.0
  pickleshare==0.7.5
  random2==1.0.1
- scipy==1.9.
+ scipy==1.7.3
  streamlit==1.12.0
  streamlit-aggrid==0.2.3.post2
  streamlit-authenticator==0.2.1
