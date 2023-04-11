@@ -1379,8 +1379,11 @@ def load_country_flag(country: str) -> Image:
     PIL.Image.Image
         An Image object representing the country flag.
     """
-    file_path = "datasets/flags/" + country + ".png"
-    return Image.open(file_path)
+    try:
+        file_path = "datasets/flags/" + country + ".png"
+        return Image.open(file_path)
+    except FileNotFoundError:
+        return None
 country_flag = load_country_flag(country)
 
 flag1, flag2 = st.columns([1,5], gap="medium")
