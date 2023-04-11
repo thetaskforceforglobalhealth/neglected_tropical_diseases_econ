@@ -2577,7 +2577,7 @@ if "Onchocerciasis" in ntd_disease:
     
         # #========================================================================================
         # The country_espen dataframe contains LF status details
-        country_espen = pd.read_csv("/ntd_data/datasets/oncho.csv")
+        country_espen = pd.read_csv("datasets/oncho.csv")
         country_espen = country_espen[country_espen["Year"]==2020].copy()
         country_espen = country_espen[country_espen["ADMIN0"]==country] 
         country_espen = country_espen.drop_duplicates(subset=["IU_CODE"])
@@ -3019,10 +3019,10 @@ if "Onchocerciasis" in ntd_disease:
         with country_maps:
 
             try:
-                country_map_1 = Image.open("/ntd_data/datasets/static_oncho_maps/"+country+".png")
+                country_map_1 = Image.open("datasets/static_oncho_maps/"+country+".png")
                 st.image(country_map_1)
                 st.download_button(label = f"Download {country} map",
-                                    data = open("/ntd_data/datasets/static_oncho_maps/"+country+".png", 'rb').read(),
+                                    data = open("datasets/static_oncho_maps/"+country+".png", 'rb').read(),
                                     file_name =country+".png",
                                     mime = "image/png")
             except IOError:
@@ -3031,7 +3031,7 @@ if "Onchocerciasis" in ntd_disease:
         interactive_map = st.expander(translate_text(f"Click here if you want to see the interactive map for {country}"))
         with interactive_map:
             try:
-                html_map = open("/ntd_data/datasets/oncho_html_maps/"+country+".html", "r", encoding='utf-8')
+                html_map = open("datasets/oncho_html_maps/"+country+".html", "r", encoding='utf-8')
                 source_code =html_map.read()
                 components.html(source_code, width=1000, height=1500)
             except IOError:
