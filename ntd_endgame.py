@@ -1354,7 +1354,7 @@ def load_data(file_path: str) -> pd.DataFrame:
     df["Hourly_PPP(Int$)"] = df.apply(lambda row: row["Hourly_Nominal(USD)"] * 2.8 if row["Hourly_PPP(Int$)"] == 0 else row["Hourly_PPP(Int$)"], axis=1)
     return df
 
-country_inputs = load_data("/datasets/df_gdp.csv")
+country_inputs = load_data("datasets/df_gdp.csv")
 country_dict = country_inputs.set_index("Country").T.to_dict()
 country_list = sorted(country_inputs["Country"].tolist())
 country = st.sidebar.selectbox(
@@ -1379,7 +1379,7 @@ def load_country_flag(country: str) -> Image:
     PIL.Image.Image
         An Image object representing the country flag.
     """
-    file_path = "/datasets/flags/" + country + ".png"
+    file_path = "datasets/flags/" + country + ".png"
     return Image.open(file_path)
 country_flag = load_country_flag(country)
 
@@ -1482,7 +1482,7 @@ if "Lymphatic filariasis" in ntd_disease:
     with tabs[1]:
         # #=====================================================================================================================================================
         # The country_espen dataframe contains LF status details
-        country_espen = pd.read_csv("/datasets/espen.csv")
+        country_espen = pd.read_csv("datasets/espen.csv")
         country_espen.drop(["CONTINENT", "REGION", "WHO_REGION", "ADMIN0ID", "ADMIN0_FIP",
         "ADMIN1ID", "ADMIN2ID", "Alt_ADMIN2","ADMIN0ISO2", "ADMIN0ISO3", "ADMIN3ID", "IUs_ADM" ], axis=1, inplace=True)
         country_espen = country_espen[country_espen["ADMIN0"]==country] 
@@ -1949,7 +1949,7 @@ if "Lymphatic filariasis" in ntd_disease:
             st.write(translate_text(f"""We estimate {hydrocele_cases:,.0f} chronic hydrocele cases, {lymphedema_cases:,.0f} chronic 
                         lymphedema cases, and {adl_cases_total:,.0f} annual ADL cases at this level in the counterfactual scenario of no MDA."""))
             
-            lymph_df = pd.read_csv("/datasets/lymph_proportions.csv")
+            lymph_df = pd.read_csv("datasets/lymph_proportions.csv")
             lymph_df["Cases"] = [x * lymphedema_cases for x in lymph_df["First"]]
             stages = ["Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Stage 6", "Stage 7"]
             
@@ -2019,10 +2019,10 @@ if "Lymphatic filariasis" in ntd_disease:
             #     except IOError:
             #         st.write(f"Static map for {country} not found. Please check source directory.")
             try:
-                country_map_1 = Image.open("/datasets/static_lf_maps/"+country+".png")
+                country_map_1 = Image.open("datasets/static_lf_maps/"+country+".png")
                 st.image(country_map_1)
                 st.download_button(label = f"Download {country} map",
-                                    data = open("/datasets/static_lf_maps/"+country+".png", 'rb').read(),
+                                    data = open("datasets/static_lf_maps/"+country+".png", 'rb').read(),
                                     file_name =country+".png",
                                     mime = "image/png")
             except IOError:
@@ -2044,7 +2044,7 @@ if "Lymphatic filariasis" in ntd_disease:
             #     Raises:
             #         IOError: If the HTML file is not found.
             #     """
-            #     html_map_path = "/datasets/lf_html_maps/" + country + ".html"
+            #     html_map_path = "datasets/lf_html_maps/" + country + ".html"
             #     try:
             #         with open(html_map_path, "r", encoding="utf-8") as f:
             #             return f.read()
@@ -2059,7 +2059,7 @@ if "Lymphatic filariasis" in ntd_disease:
 
 
             try:
-                html_map = open("/datasets/lf_html_maps/"+country+".html", "r", encoding='utf-8')
+                html_map = open("datasets/lf_html_maps/"+country+".html", "r", encoding='utf-8')
                 source_code =html_map.read()
                 components.html(source_code, width=1000, height=1500)
             except IOError:
