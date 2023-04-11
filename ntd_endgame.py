@@ -1382,7 +1382,7 @@ def load_country_flag(country: str) -> Image:
     try:
         file_path = "datasets/flags/" + country + ".png"
         return Image.open(file_path)
-    except FileNotFoundError:
+    except Exception as e:
         return None
 country_flag = load_country_flag(country)
 
