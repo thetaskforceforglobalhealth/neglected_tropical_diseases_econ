@@ -3032,7 +3032,7 @@ if "Onchocerciasis" in ntd_disease:
         with interactive_map:
             try:
                 html_map = open("datasets/oncho_html_maps/"+country+".html", "r", encoding='utf-8')
-                source_code =html_map.read()
+                source_code = html_map.read()
                 components.html(source_code, width=1000, height=1500)
             except IOError:
                 st.write(translate_text(f"HTML map for {country} not found. Please check source directory and rerun."))
