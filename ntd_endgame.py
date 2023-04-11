@@ -1379,7 +1379,7 @@ def load_country_flag(country: str) -> Image:
     PIL.Image.Image
         An Image object representing the country flag.
     """
-    file_path = "/Users/wobiero/Desktop/LF_Lymphasim/flags/" + country + ".png"
+    file_path = "/ntd_data/datasets/flags/" + country + ".png"
     return Image.open(file_path)
 country_flag = load_country_flag(country)
 
