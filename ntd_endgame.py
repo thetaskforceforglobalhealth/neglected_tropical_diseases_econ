@@ -2508,7 +2508,7 @@ if "Lymphatic filariasis" in ntd_disease:
                 with open(file_name) as f:
                     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-            local_css("dataset/style.css")
+            local_css("style/style.css")
 #==========================================================================================================
 
 # ONCHOCERCIASIS SECTION
@@ -3797,4 +3797,4 @@ if "Onchocerciasis" in ntd_disease:
                 with open(file_name) as f:
                     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-            local_css("dataset/style.css")
+            local_css("style/style.css")
