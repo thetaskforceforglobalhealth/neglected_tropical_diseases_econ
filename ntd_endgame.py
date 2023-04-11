@@ -1385,7 +1385,7 @@ def load_country_flag(country: str) -> Image:
     except Exception as e:
         return None
 if country == "Côte d’Ivoire":
-    country_flag = Image.open("/datasets/flags/ci.png")
+    country_flag = Image.open("datasets/flags/ci.png")
 else:
     country_flag = load_country_flag(country)
 
