@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5fd94ec0134217923897f038336e5690 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5fd94ec0134217923897f038336e5690" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+
+<div id='maplegend' class='maplegend'
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+<div class='legend-title'>Endemicity</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:#f7fbff;opacity:1.0;'></span>Endemic (under MDA)</li>
+    <li><span style='background:#08306b;opacity:1.0;'></span>Endemic (under post-intervention surveillance)</li>
+  </ul>
+</div>
+</div>
+
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_5fd94ec0134217923897f038336e5690 = L.map(
+                "map_5fd94ec0134217923897f038336e5690",
+                {
+                    center: [0.0, 34.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    drawExport: false,
+                    layersControl: true,
+                }
+            );
+            L.control.scale().addTo(map_5fd94ec0134217923897f038336e5690);
+
+            
+
+        
+    
+            var tile_layer_74cefa4818a4aa0f765bb63cae241eed = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 24, "maxZoom": 24, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5fd94ec0134217923897f038336e5690);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_5fd94ec0134217923897f038336e5690);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(
+                map_5fd94ec0134217923897f038336e5690
+            );
+            options.edit.featureGroup = drawnItems;
+            var draw_control_ea2d7f4d8d3103fbb24df398387eb1d0 = new L.Control.Draw(
+                options
+            ).addTo( map_5fd94ec0134217923897f038336e5690 );
+            map_5fd94ec0134217923897f038336e5690.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems.addLayer(layer);
+             });
+            map_5fd94ec0134217923897f038336e5690.on('draw:created', function(e) {
+                drawnItems.addLayer(e.layer);
+            });
+            
+        
+    
+            var measure_control_54e1b399697a9aa01e276eedaec14e2e = new L.Control.Measure(
+                {"position": "bottomleft", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_5fd94ec0134217923897f038336e5690.addControl(measure_control_54e1b399697a9aa01e276eedaec14e2e);
+
+        
+    
+            L.Control.geocoder(
+                {"collapsed": true, "defaultMarkGeocode": true, "position": "topleft"}
+            ).on('markgeocode', function(e) {
+                map_5fd94ec0134217923897f038336e5690.setView(e.geocode.center, 11);
+            }).addTo(map_5fd94ec0134217923897f038336e5690);
+
+        
+    
+            map_5fd94ec0134217923897f038336e5690.fitBounds(
+                [[0, 34], [0, 34]],
+                {"maxZoom": 10}
+            );
+        
+    
+        function geo_json_17596198eca4abc42992cc81b20b4d42_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillOpacity": 0.1, "opacity": 1, "weight": 1};
+            }
+        }
+        function geo_json_17596198eca4abc42992cc81b20b4d42_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_17596198eca4abc42992cc81b20b4d42_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_17596198eca4abc42992cc81b20b4d42.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_17596198eca4abc42992cc81b20b4d42_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_17596198eca4abc42992cc81b20b4d42 = L.geoJson(null, {
+                onEachFeature: geo_json_17596198eca4abc42992cc81b20b4d42_onEachFeature,
+            
+                style: geo_json_17596198eca4abc42992cc81b20b4d42_styler,
+        });
+
+        function geo_json_17596198eca4abc42992cc81b20b4d42_add (data) {
+            geo_json_17596198eca4abc42992cc81b20b4d42
+                .addData(data)
+                .addTo(map_5fd94ec0134217923897f038336e5690);
+        }
+            geo_json_17596198eca4abc42992cc81b20b4d42_add({"bbox": [43.22135017878403, -12.381871899772099, 44.534712527624684, -11.3641975036534], "features": [{"bbox": [43.62375460033485, -12.332604549952382, 43.79376445993027, -12.247042336489248], "geometry": {"coordinates": [[[43.79376445993027, -12.309089909352881], [43.74306206846424, -12.276342427686492], [43.69147400011182, -12.254834335972863], [43.65777678524614, -12.247042336489248], [43.62886701232976, -12.256127746929328], [43.62375460033485, -12.275063658087278], [43.636406140419716, -12.312016162865154], [43.65147338954248, -12.309681713538367], [43.660449333403506, -12.292016683970097], [43.67589899983428, -12.292351003537306], [43.7279938096351, -12.316595267634854], [43.73778214312671, -12.329494294995282], [43.75334510418282, -12.332604549952382], [43.79376445993027, -12.309089909352881]]], "type": "Polygon"}, "id": "454", "properties": {"ADMIN0": "Comoros", "ADMIN2": "FOMBONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "FOMBONI", "PopReq": 0}, "type": "Feature"}, {"bbox": [43.352251428836105, -11.907082502167905, 43.48129537520732, -11.744595899651452], "geometry": {"coordinates": [[[43.415254252959905, -11.899864502657655], [43.469661249945254, -11.907082502167905], [43.480728888605995, -11.898542247748514], [43.48129537520732, -11.88080169654777], [43.43664083389944, -11.830173371742008], [43.434249047895904, -11.79843810071071], [43.425319047471774, -11.760288157245325], [43.43804076035337, -11.744595899651452], [43.41392666693747, -11.750892235338029], [43.36937186827054, -11.7735935822543], [43.352251428836105, -11.817645739692878], [43.35280948025689, -11.852533389941021], [43.37336574478606, -11.861448318443534], [43.3998003357012, -11.89468502394329], [43.415254252959905, -11.899864502657655]]], "type": "Polygon"}, "id": "455", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OUZIOINI", "Cov": 93.47, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "OUZIOINI", "PopReq": 29927}, "type": "Feature"}, {"bbox": [44.46536973109378, -12.38031968805986, 44.5344137497578, -12.27856843449032], "geometry": {"coordinates": [[[44.46536973109378, -12.319492773205576], [44.49190720965164, -12.350950269622578], [44.49470702662692, -12.369578512206733], [44.51185124985684, -12.38031968805986], [44.52553860495649, -12.376656062878627], [44.5344137497578, -12.341307531273785], [44.53141833361259, -12.310577934563542], [44.52267841310928, -12.27856843449032], [44.49116600072756, -12.2864120003758], [44.477005955718695, -12.281617898755297], [44.468094829796975, -12.297622546231448], [44.46536973109378, -12.319492773205576]]], "type": "Polygon"}, "id": "456", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MREMANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "MREMANI", "PopReq": 0}, "type": "Feature"}, {"bbox": [43.65147338954248, -12.359147571832365, 43.76403215899703, -12.292016683970097], "geometry": {"coordinates": [[[43.75334510418282, -12.332604549952382], [43.73778214312671, -12.329494294995282], [43.7279938096351, -12.316595267634854], [43.67589899983428, -12.292351003537306], [43.660449333403506, -12.292016683970097], [43.65147338954248, -12.309681713538367], [43.6676638633504, -12.350053567970429], [43.71591867894216, -12.359147571832365], [43.76403215899703, -12.353334525162143], [43.75334510418282, -12.332604549952382]]], "type": "Polygon"}, "id": "457", "properties": {"ADMIN0": "Comoros", "ADMIN2": "NIOUMACHOUA", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "NIOUMACHOUA", "PopReq": 0}, "type": "Feature"}, {"bbox": [43.75334510418282, -12.381871899772099, 43.86819125564197, -12.309089909352881], "geometry": {"coordinates": [[[43.76403215899703, -12.353334525162143], [43.775907910409316, -12.367459134706131], [43.81380657460491, -12.370303714183512], [43.864090641304365, -12.381871899772099], [43.86819125564197, -12.364629873994739], [43.857321364023015, -12.343608447830254], [43.829607500278065, -12.323402506790755], [43.79376445993027, -12.309089909352881], [43.75334510418282, -12.332604549952382], [43.76403215899703, -12.353334525162143]]], "type": "Polygon"}, "id": "458", "properties": {"ADMIN0": "Comoros", "ADMIN2": "WANANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "WANANI", "PopReq": 0}, "type": "Feature"}, {"bbox": [43.415254252959905, -11.934714044452065, 43.50241284514225, -11.744595899651452], "geometry": {"coordinates": [[[43.415254252959905, -11.899864502657655], [43.4257936534875, -11.918951373937505], [43.45683493902859, -11.934714044452065], [43.47744483298021, -11.926249353723376], [43.50241284514225, -11.892364632174612], [43.49983181824434, -11.874720623655527], [43.474274736733044, -11.843139769310017], [43.4553742855631, -11.808935041341757], [43.445436097810756, -11.782362705393869], [43.446561482045894, -11.76487545095816], [43.43804076035337, -11.744595899651452], [43.425319047471774, -11.760288157245325], [43.434249047895904, -11.79843810071071], [43.43664083389944, -11.830173371742008], [43.48129537520732, -11.88080169654777], [43.480728888605995, -11.898542247748514], [43.469661249945254, -11.907082502167905], [43.415254252959905, -11.899864502657655]]], "type": "Polygon"}, "id": "459", "properties": {"ADMIN0": "Comoros", "ADMIN2": "FOUMBOUNI", "Cov": 94.05, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "FOUMBOUNI", "PopReq": 32225}, "type": "Feature"}, {"bbox": [43.337432380633075, -11.557247943934074, 43.4046196507751, -11.399444673586324], "geometry": {"coordinates": [[[43.394418600699254, -11.548172884454376], [43.39684428552836, -11.512837178454784], [43.390522599227204, -11.488891833876199], [43.4046196507751, -11.438651112826523], [43.402748683718784, -11.417847676617322], [43.39333349332822, -11.399444673586324], [43.3743779996859, -11.405468011239885], [43.3536449997094, -11.428556291702897], [43.337432380633075, -11.503148578890151], [43.34737379243897, -11.557247943934074], [43.37681666696745, -11.554972221625563], [43.394418600699254, -11.548172884454376]]], "type": "Polygon"}, "id": "460", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MBENI", "Cov": 86.67, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MBENI", "PopReq": 38664}, "type": "Feature"}, {"bbox": [43.255760000215126, -11.506014287280076, 43.39333349332822, -11.3641975036534], "geometry": {"coordinates": [[[43.39333349332822, -11.399444673586324], [43.38115711172297, -11.371132892164356], [43.33498175048687, -11.3641975036534], [43.29139142892303, -11.3778828701389], [43.276280638458445, -11.389081299601225], [43.260955589018856, -11.41584943827541], [43.255760000215126, -11.44546632102669], [43.27160401717418, -11.499323653542632], [43.28913428600755, -11.506014287280076], [43.337432380633075, -11.503148578890151], [43.3536449997094, -11.428556291702897], [43.3743779996859, -11.405468011239885], [43.39333349332822, -11.399444673586324]]], "type": "Polygon"}, "id": "461", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MITSAMIOULI", "Cov": 93.97, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MITSAMIOULI", "PopReq": 59248}, "type": "Feature"}, {"bbox": [43.24129864409026, -11.854884235474211, 43.36937186827054, -11.753830001155864], "geometry": {"coordinates": [[[43.36937186827054, -11.7735935822543], [43.31643250016884, -11.753955002397193], [43.300490000006896, -11.753830001155864], [43.25261208337233, -11.76939148364348], [43.24129864409026, -11.783310693742182], [43.25420229186807, -11.798223173188441], [43.266008889173136, -11.829007047757027], [43.29129418629353, -11.84870349723241], [43.31074112666823, -11.854884235474211], [43.35280948025689, -11.852533389941021], [43.352251428836105, -11.817645739692878], [43.36937186827054, -11.7735935822543]]], "type": "Polygon"}, "id": "462", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MITSOUDJE", "Cov": 95.0, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MITSOUDJE", "PopReq": 24028}, "type": "Feature"}, {"bbox": [43.22135017878403, -11.783310693742182, 43.37032500054994, -11.499323653542632], "geometry": {"coordinates": [[[43.337432380633075, -11.503148578890151], [43.28913428600755, -11.506014287280076], [43.27160401717418, -11.499323653542632], [43.25652374966631, -11.53704629315439], [43.2574385714938, -11.576215752578358], [43.25101833371777, -11.608696690819441], [43.25270700026358, -11.671030047997586], [43.22135017878403, -11.731615258463242], [43.230792539618676, -11.772453700079764], [43.24129864409026, -11.783310693742182], [43.25261208337233, -11.76939148364348], [43.300490000006896, -11.753830001155864], [43.31643250016884, -11.753955002397193], [43.36937186827054, -11.7735935822543], [43.37032500054994, -11.760855005577868], [43.35654200002534, -11.724514038797356], [43.328093333242606, -11.631553595721922], [43.328919999798, -11.613920023764845], [43.34737379243897, -11.557247943934074], [43.337432380633075, -11.503148578890151]]], "type": "Polygon"}, "id": "463", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MORONI", "Cov": 95.64, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MORONI", "PopReq": 188390}, "type": "Feature"}, {"bbox": [44.463872307787135, -12.2864120003758, 44.534712527624684, -12.103829457589555], "geometry": {"coordinates": [[[44.52267841310928, -12.27856843449032], [44.534712527624684, -12.25437718082548], [44.51611833369466, -12.180801141529166], [44.50781666618419, -12.16830002045107], [44.49874399981819, -12.132128016981339], [44.48384494136778, -12.103829457589555], [44.463872307787135, -12.111984639418921], [44.464793801402195, -12.161398320201059], [44.4824818817731, -12.184179883240814], [44.48253029737366, -12.205138585394476], [44.467623333748726, -12.228774473038124], [44.464652800038586, -12.245372044649717], [44.477005955718695, -12.281617898755297], [44.49116600072756, -12.2864120003758], [44.52267841310928, -12.27856843449032]]], "type": "Polygon"}, "id": "464", "properties": {"ADMIN0": "Comoros", "ADMIN2": "DOMONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "DOMONI", "PopReq": 0}, "type": "Feature"}, {"bbox": [44.32249657845302, -12.219684855725948, 44.439947470536964, -12.153218060644752], "geometry": {"coordinates": [[[44.439947470536964, -12.201260809116558], [44.434290666903465, -12.16453001443788], [44.424996274765746, -12.153218060644752], [44.40479557151089, -12.155603299461577], [44.37461918931525, -12.17909595846074], [44.323019180556074, -12.192045091156071], [44.32249657845302, -12.20574434704838], [44.36722714328506, -12.213008571853631], [44.413729285570426, -12.214842856889065], [44.43106670318028, -12.219684855725948], [44.439947470536964, -12.201260809116558]]], "type": "Polygon"}, "id": "465", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MUTSAMUDU", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "MUTSAMUDU", "PopReq": 0}, "type": "Feature"}, {"bbox": [44.42315685294897, -12.201260809116558, 44.490805999979166, -12.066443004223096], "geometry": {"coordinates": [[[44.48384494136778, -12.103829457589555], [44.490805999979166, -12.090396013138921], [44.467505000473004, -12.066443004223096], [44.4520049996402, -12.070825010682407], [44.42778375787218, -12.087315443271404], [44.42315685294897, -12.099931478803365], [44.43190700077176, -12.114449050193128], [44.42316216648387, -12.133113917904852], [44.424996274765746, -12.153218060644752], [44.434290666903465, -12.16453001443788], [44.439947470536964, -12.201260809116558], [44.45763090931279, -12.187279123206402], [44.464793801402195, -12.161398320201059], [44.463872307787135, -12.111984639418921], [44.48384494136778, -12.103829457589555]]], "type": "Polygon"}, "id": "466", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OUANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "OUANI", "PopReq": 0}, "type": "Feature"}, {"bbox": [44.298480232519815, -12.319492773205576, 44.477005955718695, -12.20574434704838], "geometry": {"coordinates": [[[44.43106670318028, -12.219684855725948], [44.413729285570426, -12.214842856889065], [44.36722714328506, -12.213008571853631], [44.32249657845302, -12.20574434704838], [44.298480232519815, -12.222899305751305], [44.314139148919615, -12.23162320804841], [44.351716486636384, -12.236493788026074], [44.38555871833503, -12.251384125809274], [44.40935814807657, -12.282252226153554], [44.42369483870125, -12.287017435117091], [44.433987736125026, -12.302464013592758], [44.46536973109378, -12.319492773205576], [44.468094829796975, -12.297622546231448], [44.477005955718695, -12.281617898755297], [44.464652800038586, -12.245372044649717], [44.44409533356353, -12.242907014132447], [44.43106670318028, -12.219684855725948]]], "type": "Polygon"}, "id": "467", "properties": {"ADMIN0": "Comoros", "ADMIN2": "POMONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "POMONI", "PopReq": 0}, "type": "Feature"}, {"bbox": [44.22494883077095, -12.222899305751305, 44.323019180556074, -12.166597878901069], "geometry": {"coordinates": [[[44.323019180556074, -12.192045091156071], [44.25116340900161, -12.17900613967605], [44.231792530778634, -12.166597878901069], [44.22494883077095, -12.1834855800706], [44.266586000209735, -12.208854803315548], [44.298480232519815, -12.222899305751305], [44.32249657845302, -12.20574434704838], [44.323019180556074, -12.192045091156071]]], "type": "Polygon"}, "id": "468", "properties": {"ADMIN0": "Comoros", "ADMIN2": "SIMA", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "SIMA", "PopReq": 0}, "type": "Feature"}, {"bbox": [44.43106670318028, -12.245372044649717, 44.48253029737366, -12.161398320201059], "geometry": {"coordinates": [[[44.464652800038586, -12.245372044649717], [44.467623333748726, -12.228774473038124], [44.48253029737366, -12.205138585394476], [44.4824818817731, -12.184179883240814], [44.464793801402195, -12.161398320201059], [44.45763090931279, -12.187279123206402], [44.439947470536964, -12.201260809116558], [44.43106670318028, -12.219684855725948], [44.44409533356353, -12.242907014132447], [44.464652800038586, -12.245372044649717]]], "type": "Polygon"}, "id": "469", "properties": {"ADMIN0": "Comoros", "ADMIN2": "TSEMBEHOU", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "TSEMBEHOU", "PopReq": 0}, "type": "Feature"}, {"bbox": [43.328093333242606, -11.7735935822543, 43.43804076035337, -11.548172884454376], "geometry": {"coordinates": [[[43.43804076035337, -11.744595899651452], [43.43706127599515, -11.724924071582162], [43.409024757163095, -11.671202048220968], [43.388773750048905, -11.645718790098536], [43.384074582847624, -11.604477168899804], [43.394418600699254, -11.548172884454376], [43.37681666696745, -11.554972221625563], [43.34737379243897, -11.557247943934074], [43.328919999798, -11.613920023764845], [43.328093333242606, -11.631553595721922], [43.35654200002534, -11.724514038797356], [43.37032500054994, -11.760855005577868], [43.36937186827054, -11.7735935822543], [43.41392666693747, -11.750892235338029], [43.43804076035337, -11.744595899651452]]], "type": "Polygon"}, "id": "470", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OICHILI", "Cov": 88.5, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "OICHILI", "PopReq": 27743}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_17596198eca4abc42992cc81b20b4d42.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["ADMIN0", "Endemicity", "PopReq", "ADMIN2", "Cov", "IUs_NAME"];
+    let aliases = ["ADMIN0", "Endemicity", "PopReq", "ADMIN2", "Cov", "IUs_NAME"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            map_5fd94ec0134217923897f038336e5690.fitBounds(
+                [[-12.381871899772099, 44.534712527624684], [-11.3641975036534, 43.22135017878403]],
+                {}
+            );
+        
+    
+        function geo_json_05e07cba5e1c86436a7808f9c64682d6_styler(feature) {
+            switch(feature.id) {
+                case "455": case "459": case "460": case "461": case "462": case "463": case "470": 
+                    return {"fillColor": "#f7fbff", "fillOpacity": 1.0, "opacity": 1, "weight": 1};
+                default:
+                    return {"fillColor": "#08306b", "fillOpacity": 1.0, "opacity": 1, "weight": 1};
+            }
+        }
+        function geo_json_05e07cba5e1c86436a7808f9c64682d6_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_05e07cba5e1c86436a7808f9c64682d6_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_05e07cba5e1c86436a7808f9c64682d6.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_05e07cba5e1c86436a7808f9c64682d6_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_05e07cba5e1c86436a7808f9c64682d6 = L.geoJson(null, {
+                onEachFeature: geo_json_05e07cba5e1c86436a7808f9c64682d6_onEachFeature,
+            
+                style: geo_json_05e07cba5e1c86436a7808f9c64682d6_styler,
+        });
+
+        function geo_json_05e07cba5e1c86436a7808f9c64682d6_add (data) {
+            geo_json_05e07cba5e1c86436a7808f9c64682d6
+                .addData(data)
+                .addTo(map_5fd94ec0134217923897f038336e5690);
+        }
+            geo_json_05e07cba5e1c86436a7808f9c64682d6_add({"bbox": [43.22135017878403, -12.381871899772099, 44.534712527624684, -11.3641975036534], "features": [{"bbox": [43.62375460033485, -12.332604549952382, 43.79376445993027, -12.247042336489248], "geometry": {"coordinates": [[[43.79376445993027, -12.309089909352881], [43.74306206846424, -12.276342427686492], [43.69147400011182, -12.254834335972863], [43.65777678524614, -12.247042336489248], [43.62886701232976, -12.256127746929328], [43.62375460033485, -12.275063658087278], [43.636406140419716, -12.312016162865154], [43.65147338954248, -12.309681713538367], [43.660449333403506, -12.292016683970097], [43.67589899983428, -12.292351003537306], [43.7279938096351, -12.316595267634854], [43.73778214312671, -12.329494294995282], [43.75334510418282, -12.332604549952382], [43.79376445993027, -12.309089909352881]]], "type": "Polygon"}, "id": "454", "properties": {"ADMIN0": "Comoros", "ADMIN2": "FOMBONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "FOMBONI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [43.352251428836105, -11.907082502167905, 43.48129537520732, -11.744595899651452], "geometry": {"coordinates": [[[43.415254252959905, -11.899864502657655], [43.469661249945254, -11.907082502167905], [43.480728888605995, -11.898542247748514], [43.48129537520732, -11.88080169654777], [43.43664083389944, -11.830173371742008], [43.434249047895904, -11.79843810071071], [43.425319047471774, -11.760288157245325], [43.43804076035337, -11.744595899651452], [43.41392666693747, -11.750892235338029], [43.36937186827054, -11.7735935822543], [43.352251428836105, -11.817645739692878], [43.35280948025689, -11.852533389941021], [43.37336574478606, -11.861448318443534], [43.3998003357012, -11.89468502394329], [43.415254252959905, -11.899864502657655]]], "type": "Polygon"}, "id": "455", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OUZIOINI", "Cov": 93.47, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "OUZIOINI", "PopReq": 29927, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [44.46536973109378, -12.38031968805986, 44.5344137497578, -12.27856843449032], "geometry": {"coordinates": [[[44.46536973109378, -12.319492773205576], [44.49190720965164, -12.350950269622578], [44.49470702662692, -12.369578512206733], [44.51185124985684, -12.38031968805986], [44.52553860495649, -12.376656062878627], [44.5344137497578, -12.341307531273785], [44.53141833361259, -12.310577934563542], [44.52267841310928, -12.27856843449032], [44.49116600072756, -12.2864120003758], [44.477005955718695, -12.281617898755297], [44.468094829796975, -12.297622546231448], [44.46536973109378, -12.319492773205576]]], "type": "Polygon"}, "id": "456", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MREMANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "MREMANI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [43.65147338954248, -12.359147571832365, 43.76403215899703, -12.292016683970097], "geometry": {"coordinates": [[[43.75334510418282, -12.332604549952382], [43.73778214312671, -12.329494294995282], [43.7279938096351, -12.316595267634854], [43.67589899983428, -12.292351003537306], [43.660449333403506, -12.292016683970097], [43.65147338954248, -12.309681713538367], [43.6676638633504, -12.350053567970429], [43.71591867894216, -12.359147571832365], [43.76403215899703, -12.353334525162143], [43.75334510418282, -12.332604549952382]]], "type": "Polygon"}, "id": "457", "properties": {"ADMIN0": "Comoros", "ADMIN2": "NIOUMACHOUA", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "NIOUMACHOUA", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [43.75334510418282, -12.381871899772099, 43.86819125564197, -12.309089909352881], "geometry": {"coordinates": [[[43.76403215899703, -12.353334525162143], [43.775907910409316, -12.367459134706131], [43.81380657460491, -12.370303714183512], [43.864090641304365, -12.381871899772099], [43.86819125564197, -12.364629873994739], [43.857321364023015, -12.343608447830254], [43.829607500278065, -12.323402506790755], [43.79376445993027, -12.309089909352881], [43.75334510418282, -12.332604549952382], [43.76403215899703, -12.353334525162143]]], "type": "Polygon"}, "id": "458", "properties": {"ADMIN0": "Comoros", "ADMIN2": "WANANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "WANANI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [43.415254252959905, -11.934714044452065, 43.50241284514225, -11.744595899651452], "geometry": {"coordinates": [[[43.415254252959905, -11.899864502657655], [43.4257936534875, -11.918951373937505], [43.45683493902859, -11.934714044452065], [43.47744483298021, -11.926249353723376], [43.50241284514225, -11.892364632174612], [43.49983181824434, -11.874720623655527], [43.474274736733044, -11.843139769310017], [43.4553742855631, -11.808935041341757], [43.445436097810756, -11.782362705393869], [43.446561482045894, -11.76487545095816], [43.43804076035337, -11.744595899651452], [43.425319047471774, -11.760288157245325], [43.434249047895904, -11.79843810071071], [43.43664083389944, -11.830173371742008], [43.48129537520732, -11.88080169654777], [43.480728888605995, -11.898542247748514], [43.469661249945254, -11.907082502167905], [43.415254252959905, -11.899864502657655]]], "type": "Polygon"}, "id": "459", "properties": {"ADMIN0": "Comoros", "ADMIN2": "FOUMBOUNI", "Cov": 94.05, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "FOUMBOUNI", "PopReq": 32225, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [43.337432380633075, -11.557247943934074, 43.4046196507751, -11.399444673586324], "geometry": {"coordinates": [[[43.394418600699254, -11.548172884454376], [43.39684428552836, -11.512837178454784], [43.390522599227204, -11.488891833876199], [43.4046196507751, -11.438651112826523], [43.402748683718784, -11.417847676617322], [43.39333349332822, -11.399444673586324], [43.3743779996859, -11.405468011239885], [43.3536449997094, -11.428556291702897], [43.337432380633075, -11.503148578890151], [43.34737379243897, -11.557247943934074], [43.37681666696745, -11.554972221625563], [43.394418600699254, -11.548172884454376]]], "type": "Polygon"}, "id": "460", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MBENI", "Cov": 86.67, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MBENI", "PopReq": 38664, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [43.255760000215126, -11.506014287280076, 43.39333349332822, -11.3641975036534], "geometry": {"coordinates": [[[43.39333349332822, -11.399444673586324], [43.38115711172297, -11.371132892164356], [43.33498175048687, -11.3641975036534], [43.29139142892303, -11.3778828701389], [43.276280638458445, -11.389081299601225], [43.260955589018856, -11.41584943827541], [43.255760000215126, -11.44546632102669], [43.27160401717418, -11.499323653542632], [43.28913428600755, -11.506014287280076], [43.337432380633075, -11.503148578890151], [43.3536449997094, -11.428556291702897], [43.3743779996859, -11.405468011239885], [43.39333349332822, -11.399444673586324]]], "type": "Polygon"}, "id": "461", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MITSAMIOULI", "Cov": 93.97, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MITSAMIOULI", "PopReq": 59248, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [43.24129864409026, -11.854884235474211, 43.36937186827054, -11.753830001155864], "geometry": {"coordinates": [[[43.36937186827054, -11.7735935822543], [43.31643250016884, -11.753955002397193], [43.300490000006896, -11.753830001155864], [43.25261208337233, -11.76939148364348], [43.24129864409026, -11.783310693742182], [43.25420229186807, -11.798223173188441], [43.266008889173136, -11.829007047757027], [43.29129418629353, -11.84870349723241], [43.31074112666823, -11.854884235474211], [43.35280948025689, -11.852533389941021], [43.352251428836105, -11.817645739692878], [43.36937186827054, -11.7735935822543]]], "type": "Polygon"}, "id": "462", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MITSOUDJE", "Cov": 95.0, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MITSOUDJE", "PopReq": 24028, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [43.22135017878403, -11.783310693742182, 43.37032500054994, -11.499323653542632], "geometry": {"coordinates": [[[43.337432380633075, -11.503148578890151], [43.28913428600755, -11.506014287280076], [43.27160401717418, -11.499323653542632], [43.25652374966631, -11.53704629315439], [43.2574385714938, -11.576215752578358], [43.25101833371777, -11.608696690819441], [43.25270700026358, -11.671030047997586], [43.22135017878403, -11.731615258463242], [43.230792539618676, -11.772453700079764], [43.24129864409026, -11.783310693742182], [43.25261208337233, -11.76939148364348], [43.300490000006896, -11.753830001155864], [43.31643250016884, -11.753955002397193], [43.36937186827054, -11.7735935822543], [43.37032500054994, -11.760855005577868], [43.35654200002534, -11.724514038797356], [43.328093333242606, -11.631553595721922], [43.328919999798, -11.613920023764845], [43.34737379243897, -11.557247943934074], [43.337432380633075, -11.503148578890151]]], "type": "Polygon"}, "id": "463", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MORONI", "Cov": 95.64, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "MORONI", "PopReq": 188390, "category": 1, "color": "#f7fbff"}, "type": "Feature"}, {"bbox": [44.463872307787135, -12.2864120003758, 44.534712527624684, -12.103829457589555], "geometry": {"coordinates": [[[44.52267841310928, -12.27856843449032], [44.534712527624684, -12.25437718082548], [44.51611833369466, -12.180801141529166], [44.50781666618419, -12.16830002045107], [44.49874399981819, -12.132128016981339], [44.48384494136778, -12.103829457589555], [44.463872307787135, -12.111984639418921], [44.464793801402195, -12.161398320201059], [44.4824818817731, -12.184179883240814], [44.48253029737366, -12.205138585394476], [44.467623333748726, -12.228774473038124], [44.464652800038586, -12.245372044649717], [44.477005955718695, -12.281617898755297], [44.49116600072756, -12.2864120003758], [44.52267841310928, -12.27856843449032]]], "type": "Polygon"}, "id": "464", "properties": {"ADMIN0": "Comoros", "ADMIN2": "DOMONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "DOMONI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [44.32249657845302, -12.219684855725948, 44.439947470536964, -12.153218060644752], "geometry": {"coordinates": [[[44.439947470536964, -12.201260809116558], [44.434290666903465, -12.16453001443788], [44.424996274765746, -12.153218060644752], [44.40479557151089, -12.155603299461577], [44.37461918931525, -12.17909595846074], [44.323019180556074, -12.192045091156071], [44.32249657845302, -12.20574434704838], [44.36722714328506, -12.213008571853631], [44.413729285570426, -12.214842856889065], [44.43106670318028, -12.219684855725948], [44.439947470536964, -12.201260809116558]]], "type": "Polygon"}, "id": "465", "properties": {"ADMIN0": "Comoros", "ADMIN2": "MUTSAMUDU", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "MUTSAMUDU", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [44.42315685294897, -12.201260809116558, 44.490805999979166, -12.066443004223096], "geometry": {"coordinates": [[[44.48384494136778, -12.103829457589555], [44.490805999979166, -12.090396013138921], [44.467505000473004, -12.066443004223096], [44.4520049996402, -12.070825010682407], [44.42778375787218, -12.087315443271404], [44.42315685294897, -12.099931478803365], [44.43190700077176, -12.114449050193128], [44.42316216648387, -12.133113917904852], [44.424996274765746, -12.153218060644752], [44.434290666903465, -12.16453001443788], [44.439947470536964, -12.201260809116558], [44.45763090931279, -12.187279123206402], [44.464793801402195, -12.161398320201059], [44.463872307787135, -12.111984639418921], [44.48384494136778, -12.103829457589555]]], "type": "Polygon"}, "id": "466", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OUANI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "OUANI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [44.298480232519815, -12.319492773205576, 44.477005955718695, -12.20574434704838], "geometry": {"coordinates": [[[44.43106670318028, -12.219684855725948], [44.413729285570426, -12.214842856889065], [44.36722714328506, -12.213008571853631], [44.32249657845302, -12.20574434704838], [44.298480232519815, -12.222899305751305], [44.314139148919615, -12.23162320804841], [44.351716486636384, -12.236493788026074], [44.38555871833503, -12.251384125809274], [44.40935814807657, -12.282252226153554], [44.42369483870125, -12.287017435117091], [44.433987736125026, -12.302464013592758], [44.46536973109378, -12.319492773205576], [44.468094829796975, -12.297622546231448], [44.477005955718695, -12.281617898755297], [44.464652800038586, -12.245372044649717], [44.44409533356353, -12.242907014132447], [44.43106670318028, -12.219684855725948]]], "type": "Polygon"}, "id": "467", "properties": {"ADMIN0": "Comoros", "ADMIN2": "POMONI", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "POMONI", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [44.22494883077095, -12.222899305751305, 44.323019180556074, -12.166597878901069], "geometry": {"coordinates": [[[44.323019180556074, -12.192045091156071], [44.25116340900161, -12.17900613967605], [44.231792530778634, -12.166597878901069], [44.22494883077095, -12.1834855800706], [44.266586000209735, -12.208854803315548], [44.298480232519815, -12.222899305751305], [44.32249657845302, -12.20574434704838], [44.323019180556074, -12.192045091156071]]], "type": "Polygon"}, "id": "468", "properties": {"ADMIN0": "Comoros", "ADMIN2": "SIMA", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "SIMA", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [44.43106670318028, -12.245372044649717, 44.48253029737366, -12.161398320201059], "geometry": {"coordinates": [[[44.464652800038586, -12.245372044649717], [44.467623333748726, -12.228774473038124], [44.48253029737366, -12.205138585394476], [44.4824818817731, -12.184179883240814], [44.464793801402195, -12.161398320201059], [44.45763090931279, -12.187279123206402], [44.439947470536964, -12.201260809116558], [44.43106670318028, -12.219684855725948], [44.44409533356353, -12.242907014132447], [44.464652800038586, -12.245372044649717]]], "type": "Polygon"}, "id": "469", "properties": {"ADMIN0": "Comoros", "ADMIN2": "TSEMBEHOU", "Cov": 0.0, "Endemicity": "Endemic (under post-intervention surveillance)", "IUs_NAME": "TSEMBEHOU", "PopReq": 0, "category": 2, "color": "#08306b"}, "type": "Feature"}, {"bbox": [43.328093333242606, -11.7735935822543, 43.43804076035337, -11.548172884454376], "geometry": {"coordinates": [[[43.43804076035337, -11.744595899651452], [43.43706127599515, -11.724924071582162], [43.409024757163095, -11.671202048220968], [43.388773750048905, -11.645718790098536], [43.384074582847624, -11.604477168899804], [43.394418600699254, -11.548172884454376], [43.37681666696745, -11.554972221625563], [43.34737379243897, -11.557247943934074], [43.328919999798, -11.613920023764845], [43.328093333242606, -11.631553595721922], [43.35654200002534, -11.724514038797356], [43.37032500054994, -11.760855005577868], [43.36937186827054, -11.7735935822543], [43.41392666693747, -11.750892235338029], [43.43804076035337, -11.744595899651452]]], "type": "Polygon"}, "id": "470", "properties": {"ADMIN0": "Comoros", "ADMIN2": "OICHILI", "Cov": 88.5, "Endemicity": "Endemic (under MDA)", "IUs_NAME": "OICHILI", "PopReq": 27743, "category": 1, "color": "#f7fbff"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_05e07cba5e1c86436a7808f9c64682d6.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["ADMIN0", "Endemicity", "PopReq", "ADMIN2", "Cov", "IUs_NAME", "category", "color"];
+    let aliases = ["ADMIN0", "Endemicity", "PopReq", "ADMIN2", "Cov", "IUs_NAME", "category", "color"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            map_5fd94ec0134217923897f038336e5690.fitBounds(
+                [[-12.381871899772099, 44.534712527624684], [-11.3641975036534, 43.22135017878403]],
+                {}
+            );
+        
+    
+            var layer_control_9bcf3d903866c83a85d995ea8d2632c4 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_74cefa4818a4aa0f765bb63cae241eed,
+                },
+                overlays :  {
+                    "IUs_NAME" : geo_json_17596198eca4abc42992cc81b20b4d42,
+                    "Untitled" : geo_json_05e07cba5e1c86436a7808f9c64682d6,
+                },
+            };
+            L.control.layers(
+                layer_control_9bcf3d903866c83a85d995ea8d2632c4.base_layers,
+                layer_control_9bcf3d903866c83a85d995ea8d2632c4.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_5fd94ec0134217923897f038336e5690);
+        
+</script>
